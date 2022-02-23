@@ -34,6 +34,7 @@
 }
 
 .ant-layout-header {
+  display: none;
   overflow: hidden;
   background: rgb(24, 21, 35);
   background: linear-gradient(
@@ -80,7 +81,7 @@
 /* Social Links */
 
 .lifi-content-social-links {
-  display: none;
+  display: none !important;
 }
 
 .lifi-support-link {

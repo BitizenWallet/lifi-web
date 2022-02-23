@@ -1,4 +1,5 @@
 #notification-overlay {
+  display: none;
   position: fixed;
   width: 400px;
   bottom: 50px;
