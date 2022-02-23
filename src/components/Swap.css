@@ -1,5 +1,16 @@
 @import '../css/animations.css';
 
+.animate {
+  height: auto;
+  opacity: 1;
+  transition: all 0.5s, opacity 2s;
+}
+
+.visuallyhidden {
+  opacity: 0;
+  height: 0;
+}
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;

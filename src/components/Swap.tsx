@@ -337,6 +337,18 @@ const Swap = ({ transferChains }: SwapProps) => {
   // Elements used for animations
   const routeCards = useRef<HTMLDivElement | null>(null)
 
+  // new
+
+  const [showRoutesable, setShowRoutesable] = useState<boolean>(false)
+
+  const showRoutes = () => {
+    if (showRoutesable === false) {
+      setShowRoutesable(true)
+    } else {
+      setShowRoutesable(false)
+    }
+  }
+
   useEffect(() => {
     // get new execution status on page load
     if (!restartedOnPageLoad) {
@@ -883,7 +895,7 @@ const Swap = ({ transferChains }: SwapProps) => {
 
         {/* Swap Form */}
         <Row style={{ margin: 20 }} justify={'center'}>
-          <Col className="swap-form">
+          <Col className={'swap-form animate ' + (showRoutesable ? 'visuallyhidden' : '')}>
             <div
               className="swap-input"
               style={{ maxWidth: 450, borderRadius: 6, padding: 24, margin: '0 auto' }}>
@@ -1001,12 +1013,32 @@ const Swap = ({ transferChains }: SwapProps) => {
         </Row>
 
         {/* Routes */}
+
+        <Row justify={'center'}>
+          {/*  */}
+          {routes.length > 0 && <button onClick={showRoutes}>Show Routes</button>}
+          {/* loading */}
+          {routesLoading && (
+            <Col>
+              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 0 }}>
+                <LoadingIndicator></LoadingIndicator>
+              </Row>
+            </Col>
+          )}
+        </Row>
+
         <Row
+          className={'animate ' + (showRoutesable ? '' : 'visuallyhidden')}
           justify={'center'}
-          style={{ marginLeft: 12, marginRight: 12, marginTop: 48, padding: 12 }}>
+          style={{
+            marginLeft: 12,
+            marginRight: 12,
+            marginTop: 48,
+            padding: 12,
+          }}>
           {routes.length > 0 && (
             <Col>
-              <h3 style={{ textAlign: 'center' }}>Available routes</h3>
+              <h3 style={{ textAlign: 'center' }}>Routes</h3>
               <div
                 style={{ display: 'flex', flexDirection: 'row', overflowX: 'scroll' }}
                 ref={routeCards}>
@@ -1021,13 +1053,7 @@ const Swap = ({ transferChains }: SwapProps) => {
               </div>
             </Col>
           )}
-          {routesLoading && (
-            <Col>
-              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 0 }}>
-                <LoadingIndicator></LoadingIndicator>
-              </Row>
-            </Col>
-          )}
+
           {!routesLoading && noRoutesAvailable && (
             <Col style={{ width: '50%' }} className="no-routes-found">
               <h3 style={{ textAlign: 'center' }}>No Route Found</h3>
