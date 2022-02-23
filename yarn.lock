@@ -1952,10 +1952,8 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lifinance/sdk@^0.4.5":
+"@lifinance/sdk@file:../sdk-0.4.5":
   version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@lifinance/sdk/-/sdk-0.4.5.tgz#41a67f4d3bcc56068faf7fc77908e9083c88c87a"
-  integrity sha512-jbxlWqdcIbZOteOY4uBKjt4ZsFvXefRxZssK/gxYR2cefBjv1dfH5h9UUdder1eoYIIQIAn+1hT2Z3QLCpnEHQ==
   dependencies:
     "@connext/nxtp-sdk" "^0.1.8"
     "@ethersproject/abi" "^5.5.0"
