@@ -32,11 +32,8 @@ const getTransferChains = (jsonArraySting: string) => {
 function usePageViews() {
   const [path, setPath] = useState<string>()
 
-  // const currentPath =
-  //   (window as any).location.pathname === '/' ? '/swap' : (window as any).location.pathname
-  // if (path !== currentPath) {
-  //   setPath(currentPath)
-  // }
+  // eslint-disable-next-line no-console
+  console.log('path', path)
 
   // useEffect(() => {
   //   if (path) {
@@ -49,8 +46,6 @@ function usePageViews() {
 
 function App() {
   const path = usePageViews()
-  // eslint-disable-next-line no-console
-  console.log('path', path)
 
   function embedView() {
     setMetatags({
@@ -83,8 +78,8 @@ function App() {
             <Layout>
               <Content>
                 <Switch>
-                  {/* <Redirect exact from="/" to="/swap" /> */}
-                  <Route
+                  <Redirect exact from="/swap" to="/" />
+                  {/* <Route
                     path="/dashboard"
                     render={() => {
                       setMetatags({
@@ -97,9 +92,9 @@ function App() {
                         </>
                       )
                     }}
-                  />
+                  /> */}
                   <Route
-                    path="/swap"
+                    path="/"
                     render={() => {
                       setMetatags({
                         title: 'Swap',
