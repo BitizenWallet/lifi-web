@@ -4,7 +4,7 @@ import { GithubOutlined, TwitterOutlined } from '@ant-design/icons'
 import { Button, Col, Layout, Menu, Row } from 'antd'
 import { Content } from 'antd/lib/layout/layout'
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 
 // import logo from './assets/icon192.png'
 // import AboutPage from './components/AboutPage'
@@ -23,8 +23,6 @@ import { getChainById } from './types'
 const getTransferChains = (jsonArraySting: string) => {
   try {
     const chainIds = JSON.parse(jsonArraySting)
-    // eslint-disable-next-line no-console
-    console.log('chainIds', chainIds)
     return chainIds.map(getChainById)
   } catch (e) {
     return []
@@ -34,17 +32,17 @@ const getTransferChains = (jsonArraySting: string) => {
 function usePageViews() {
   const [path, setPath] = useState<string>()
 
-  const currentPath =
-    (window as any).location.pathname === '/' ? '/swap' : (window as any).location.pathname
-  if (path !== currentPath) {
-    setPath(currentPath)
-  }
+  // const currentPath =
+  //   (window as any).location.pathname === '/' ? '/swap' : (window as any).location.pathname
+  // if (path !== currentPath) {
+  //   setPath(currentPath)
+  // }
 
-  useEffect(() => {
-    if (path) {
-      analytics.sendPageView(path)
-    }
-  }, [path])
+  // useEffect(() => {
+  //   if (path) {
+  //     analytics.sendPageView(path)
+  //   }
+  // }, [path])
 
   return path
 }
@@ -76,7 +74,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <WrappedWeb3ReactProvider>
         <Web3ConnectionManager>
           {path === '/embed' ? (
@@ -85,7 +83,7 @@ function App() {
             <Layout>
               <Content>
                 <Switch>
-                  <Redirect exact from="/" to="/swap" />
+                  {/* <Redirect exact from="/" to="/swap" /> */}
                   <Route
                     path="/dashboard"
                     render={() => {
@@ -179,7 +177,7 @@ function App() {
           )}
         </Web3ConnectionManager>
       </WrappedWeb3ReactProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
