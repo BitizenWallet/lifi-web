@@ -52,7 +52,8 @@
     "yarn": ">=1.22"
   },
   "scripts": {
-    "deploy": "yarn build && gh-pages -d build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "start:developBackend": "bash -ac '. .env.development.developBackend; react-scripts start'",
     "start-env": "bash -ac '. .env.${REACT_APP_ENV}; react-scripts start'",
