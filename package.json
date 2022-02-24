@@ -89,5 +89,10 @@
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": "off"
+    }
   }
 }

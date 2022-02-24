@@ -9,16 +9,14 @@ function getDefaultValues() {
     h: 450,
   }
   const data = {
-    title: 'Li.Finance',
+    title: 'BitizenWallet',
     description: 'Providing liquidity when and where needed',
     url: window.location.href,
-    image: defaultImage,
+    // image: defaultImage,
     lang: 'en',
     og: {
       'og:type': 'website',
-      'og:site_name': 'Li.Finance',
-      // og:locale - The locale these tags are marked up in. Of the format language_TERRITORY. Default is en_US.
-      // og:locale:alternate - An array of other locales this page is available in.
+      'og:site_name': 'BitizenWallet',
     },
     tags: {
       'twitter:card': 'summary_large_image',

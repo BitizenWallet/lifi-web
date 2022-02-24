@@ -23,6 +23,8 @@ import { getChainById } from './types'
 const getTransferChains = (jsonArraySting: string) => {
   try {
     const chainIds = JSON.parse(jsonArraySting)
+    // eslint-disable-next-line no-console
+    console.log('chainIds', chainIds)
     return chainIds.map(getChainById)
   } catch (e) {
     return []
@@ -49,10 +51,12 @@ function usePageViews() {
 
 function App() {
   const path = usePageViews()
+  // eslint-disable-next-line no-console
+  console.log('path', path)
 
   function embedView() {
     setMetatags({
-      title: 'Li.Finance - Swap (embed)',
+      title: 'Swap (embed)',
     })
     const transferChains = getTransferChains(process.env.REACT_APP_LIFI_ENABLED_CHAINS_JSON!)
     return (
@@ -86,7 +90,7 @@ function App() {
                     path="/dashboard"
                     render={() => {
                       setMetatags({
-                        title: 'Li.Finance - Dashboard',
+                        title: 'Dashboard',
                       })
                       initStomt('dashboard')
                       return (
@@ -100,7 +104,7 @@ function App() {
                     path="/swap"
                     render={() => {
                       setMetatags({
-                        title: 'Li.Finance - Swap',
+                        title: 'Swap',
                       })
                       initStomt('swap')
                       const transferChains = getTransferChains(
@@ -117,7 +121,7 @@ function App() {
                     path="/testnet"
                     render={() => {
                       setMetatags({
-                        title: 'Li.Finance - Testnet',
+                        title: 'Testnet',
                       })
                       initStomt('swap')
                       const transferChains = getTransferChains(
@@ -134,7 +138,7 @@ function App() {
                     path="*"
                     render={() => {
                       setMetatags({
-                        title: 'Li.Finance - Not Found',
+                        title: 'Not Found',
                         status: 404,
                       })
                       initStomt('lifi')
