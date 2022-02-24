@@ -12,7 +12,7 @@ function getDefaultValues() {
     title: 'BitizenWallet',
     description: 'Providing liquidity when and where needed',
     url: window.location.href,
-    // image: defaultImage,
+    image: defaultImage,
     lang: 'en',
     og: {
       'og:type': 'website',
