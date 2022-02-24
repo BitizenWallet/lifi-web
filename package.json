@@ -1,7 +1,7 @@
 {
   "name": "lifi-web",
   "version": "0.1.0",
-  "homepage": "http://swap.dev.bitizen.org",
+  "homepage": "http://swap.dev.bitizen.org/",
   "bugs": "https://github.com/lifinance/lifi-web/issues",
   "license": "UNLICENSED",
   "dependencies": {
@@ -52,6 +52,7 @@
     "yarn": ">=1.22"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "start:developBackend": "bash -ac '. .env.development.developBackend; react-scripts start'",
     "start-env": "bash -ac '. .env.${REACT_APP_ENV}; react-scripts start'",

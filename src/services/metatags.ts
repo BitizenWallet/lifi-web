@@ -4,7 +4,7 @@ const head = document.querySelector('head')
 function getDefaultValues() {
   // facebook size: 1200 x 630
   const defaultImage = {
-    url: 'https://li.finance/placeholder.png',
+    url: 'https://swap.dev.bitizen.org/webMetadata.png',
     w: 900,
     h: 450,
   }
