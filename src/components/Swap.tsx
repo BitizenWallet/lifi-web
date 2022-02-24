@@ -927,14 +927,6 @@ const Swap = ({ transferChains }: SwapProps) => {
                   allowSameChains={true}
                 />
                 <span>
-                  {/* Disclaimer */}
-                  <Row justify={'center'} className="beta-disclaimer">
-                    <Typography.Text type="danger" style={{ textAlign: 'center' }}>
-                      Beta product - use at own risk.
-                      <br />
-                      MetaMask recommended.
-                    </Typography.Text>
-                  </Row>
                   <Row style={{ marginTop: 24 }} justify={'center'}>
                     {submitButton()}
                   </Row>

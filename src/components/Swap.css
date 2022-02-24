@@ -344,18 +344,17 @@ h4.swap-title {
 
 .site-layout-swap {
   min-height: calc(100vh - 64px);
-  margin-top: 64px;
 }
 
 .swap-view {
-  min-height: 900px;
+  min-height: 500px;
   max-width: 1600px;
   margin: auto;
 }
 
 @media only screen and (max-width: 1050px) {
   .swap-view {
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
   }
 }
 
