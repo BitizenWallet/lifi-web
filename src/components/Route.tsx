@@ -122,7 +122,7 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
 
       <div className="selected">
         <div className="dataRow background-z2">
-          <div className="value">
+          <div className="value vi-hightlight">
             <b>{formatTokenAmount(route.toToken, route.toAmount)}</b>
           </div>
           <span className="title">Estimated token</span>

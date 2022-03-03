@@ -922,7 +922,7 @@ const Swap = ({ transferChains }: SwapProps) => {
               />
               <span>
                 {/* Advanced Options */}
-                <Row justify={'center'}>
+                <Row className="optionsPanel" justify={'center'}>
                   <Collapse ghost style={{ width: '100%' }}>
                     <Collapse.Panel header={`Advanced Options`} key="1">
                       Slippage
@@ -1010,7 +1010,7 @@ const Swap = ({ transferChains }: SwapProps) => {
           {/* loading */}
           {routesLoading && (
             <Col>
-              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 0 }}>
+              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 120 }}>
                 <LoadingIndicator></LoadingIndicator>
               </Row>
             </Col>
@@ -1105,7 +1105,7 @@ const Swap = ({ transferChains }: SwapProps) => {
               size={'large'}
               onClick={showRoutes}
               style={{ marginLeft: 5, marginRight: 5 }}>
-              Routes
+              {showRoutesable ? 'Form' : 'Routes'}
             </Button>
 
             <div style={{ marginLeft: 5, marginRight: 5 }}>{submitButton()}</div>

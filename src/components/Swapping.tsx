@@ -342,10 +342,12 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
           )}
           <Typography.Text
             type={!receivedAmount.isZero() ? 'secondary' : undefined}
-            style={{ fontSize: !receivedAmount.isZero() ? 12 : 14 }}>
+            style={{ fontSize: !receivedAmount.isZero() ? 10 : 12 }}>
             {'You now have '}
-            {new BigNumber(finalTokenAmount.amount).toFixed(4)}
-            {` ${finalTokenAmount.symbol}`}
+            <span className="vi-hightlight">
+              {new BigNumber(finalTokenAmount.amount).toFixed(4)}
+              {` ${finalTokenAmount.symbol}`}
+            </span>
             {` on ${toChain.name}`}
           </Typography.Text>
         </>
@@ -368,9 +370,9 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
                 </span>
               </Tooltip>
             ))}
-          <Link to="/dashboard">
+          {/* <Link to="/dashboard">
             <Button type="link">Dashboard</Button>
-          </Link>
+          </Link> */}
         </Space>
       )
     }

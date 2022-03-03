@@ -21,9 +21,15 @@
   display: block;
 }
 
+.optionsPanel {
+  background-color: #2c323a;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
 .allRoutes {
   margin: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   margin-top: 0;
 }
 
@@ -53,6 +59,10 @@
   margin-top: 20px;
 }
 
+.vi-hightlight {
+  color: #00b78c;
+}
+
 /*  */
 .ant-layout {
   background-color: #1e242b;
@@ -62,9 +72,10 @@
 .ant-btn:hover,
 .ant-btn:focus {
   color: #fff;
-  border-color: #373c44;
-  background-color: #373c44;
+  border-color: #2c323a;
+  background-color: #2c323a;
   font-weight: 600;
+  border-radius: 6px !important;
 }
 
 .ant-btn-primary {
@@ -115,6 +126,17 @@ input {
   background-color: #3d4550 !important;
 }
 
+.ant-input[disabled],
+.ant-input[disabled]:hover {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.ant-modal-body {
+  background-color: #1e242b !important;
+}
+
+/*  */
+
 .background-z2 {
   background-color: #3d4550 !important;
   border-radius: 6px;
@@ -150,4 +172,8 @@ input {
 
 .white50Alpha {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.ant-timeline-item-content span {
+  color: #848d98;
 }
