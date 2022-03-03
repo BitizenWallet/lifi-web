@@ -29,38 +29,11 @@ function usePageViews() {
   // eslint-disable-next-line no-console
   console.log('path', path)
 
-  // useEffect(() => {
-  //   if (path) {
-  //     analytics.sendPageView(path)
-  //   }
-  // }, [path])
-
   return path
 }
 
 function App() {
   const path = usePageViews()
-
-  function embedView() {
-    setMetatags({
-      title: 'Swap (embed)',
-    })
-    const transferChains = getTransferChains(process.env.REACT_APP_LIFI_ENABLED_CHAINS_JSON!)
-    return (
-      <div className="lifiEmbed">
-        <Swap transferChains={transferChains} />
-        <div className="poweredBy">
-          powered by{' '}
-          <a href="https://li.finance/" target="_blank" rel="nofollow noreferrer">
-            Li.Finance
-          </a>
-        </div>
-        <div className="wallet-buttons-embed-view">
-          <WalletButtons />
-        </div>
-      </div>
-    )
-  }
 
   return (
     <HashRouter>

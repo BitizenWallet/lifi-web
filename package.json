@@ -54,7 +54,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "BROWSER=firefox react-scripts start",
     "start:developBackend": "bash -ac '. .env.development.developBackend; react-scripts start'",
     "start-env": "bash -ac '. .env.${REACT_APP_ENV}; react-scripts start'",
     "build": "react-scripts build",
@@ -85,8 +85,8 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
       "last 1 firefox version",
+      "last 1 chrome version",
       "last 1 safari version"
     ]
   },
