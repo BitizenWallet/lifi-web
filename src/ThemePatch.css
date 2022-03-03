@@ -219,3 +219,12 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.ant-form svg {
+  color: #848d98 !important;
+}
+
+/* input 取得焦點 */
+.form-input-wrapper {
+  /* border-color: #05a17d !important; */
+}
