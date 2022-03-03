@@ -10,6 +10,9 @@ interface RouteProps {
 }
 
 const Route = ({ route, selected, onSelect }: RouteProps) => {
+  // eslint-disable-next-line no-console
+  console.log('route', route)
+
   const formatToolName = (toolKey: string) => {
     const tool = findTool(toolKey)
     if (tool) {
@@ -109,6 +112,46 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
         marginBottom: 20,
       }}
       onClick={() => onSelect()}>
+      {/* {selected ? (
+        <div className="selected-label">Selected</div>
+      ) : (
+        <Button shape="round" type="text" size={'large'} onClick={() => onSelect()}>
+          Click To Select Route
+        </Button>
+      )} */}
+
+      <h5>Plan</h5>
+
+      <div className="selected">
+        <div className="dataRow">
+          <div className="value">
+            <b>{formatTokenAmount(route.toToken, route.toAmount)}</b>
+          </div>
+          <span className="title">Estimated token</span>
+        </div>
+
+        <div style={{ textAlign: 'left' }}>
+          <div className="dataRow">
+            <div className="value">{route.toAmountUSD} USD</div>
+            <span className="title">Estimated result</span>
+          </div>
+
+          <div className="dataRow">
+            <div className="value">{route.gasCostUSD} USD</div>
+            <span className="title">Estimated gas costs</span>
+          </div>
+
+          <div className="dataRow">
+            <div className="value">{parsedDuration} min</div>
+            <span className="title">Estimated duration</span>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <h5>Steps</h5>
+
       <Steps
         progressDot
         size="small"
@@ -120,27 +163,6 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
           return <Steps.Step key={title} title={title} description={description}></Steps.Step>
         })}
       </Steps>
-
-      <div className="selected">
-        <div style={{ textAlign: 'left', paddingLeft: 20 }}>
-          Estimated token: <b>{formatTokenAmount(route.toToken, route.toAmount)}</b>
-          <br />
-          Estimated result: {route.toAmountUSD} USD
-          <br />
-          Estimated gas costs: {route.gasCostUSD} USD
-          <br />
-          Estimated duration: {parsedDuration} min
-          <br />
-        </div>
-
-        {selected ? (
-          <div className="selected-label">Selected</div>
-        ) : (
-          <Button shape="round" type="text" size={'large'} onClick={() => onSelect()}>
-            Click To Select Route
-          </Button>
-        )}
-      </div>
     </div>
   )
 }

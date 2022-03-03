@@ -836,7 +836,7 @@ const Swap = ({ transferChains }: SwapProps) => {
   return (
     <Content className="site-layout site-layout-swap">
       <div className="swap-view">
-        {/* Historical Routes */}
+        {/* Historical Routes
         {!!historicalRoutes.length && (
           <Row justify={'center'} className="historicalTransfers">
             <Collapse
@@ -863,7 +863,7 @@ const Swap = ({ transferChains }: SwapProps) => {
               </Panel>
             </Collapse>
           </Row>
-        )}
+        )} */}
 
         {/* Active Routes */}
         {!!activeRoutes.length && (
@@ -896,111 +896,104 @@ const Swap = ({ transferChains }: SwapProps) => {
         {/* Swap Form */}
         <Row style={{ margin: 20 }} justify={'center'}>
           <Col className={'swap-form animate ' + (showRoutesable ? 'visuallyhidden' : '')}>
-            <div
-              className="swap-input"
-              style={{ maxWidth: 450, borderRadius: 6, padding: 24, margin: '0 auto' }}>
-              <Row>
-                <Title className="swap-title" level={4}>
-                  Please Specify Your Transaction
-                </Title>
-              </Row>
+            <Row>
+              <Title className="swap-title" level={4}>
+                Please Specify Your Transaction
+              </Title>
+            </Row>
 
-              <Form>
-                <SwapForm
-                  depositChain={fromChainKey}
-                  setDepositChain={setFromChainKey}
-                  depositToken={fromTokenAddress}
-                  setDepositToken={setFromTokenAddress}
-                  depositAmount={depositAmount}
-                  setDepositAmount={setDepositAmount}
-                  withdrawChain={toChainKey}
-                  setWithdrawChain={setToChainKey}
-                  withdrawToken={toTokenAddress}
-                  setWithdrawToken={setToTokenAddress}
-                  withdrawAmount={withdrawAmount}
-                  setWithdrawAmount={setWithdrawAmount}
-                  estimatedWithdrawAmount={getSelectedWithdraw().estimate}
-                  estimatedMinWithdrawAmount={getSelectedWithdraw().min}
-                  transferChains={transferChains}
-                  tokens={tokens}
-                  balances={balances}
-                  allowSameChains={true}
-                />
-                <span>
-                  <Row style={{ marginTop: 24 }} justify={'center'}>
-                    {submitButton()}
-                  </Row>
-                  {/* Advanced Options */}
-                  <Row justify={'center'}>
-                    <Collapse ghost style={{ width: '100%' }}>
-                      <Collapse.Panel header={`Advanced Options`} key="1">
-                        Slippage
-                        <div>
-                          <InputNumber
-                            defaultValue={optionSlippage}
-                            min={0}
-                            max={100}
-                            formatter={(value) => `${value}%`}
-                            parser={(value) => parseFloat(value ? value.replace('%', '') : '')}
-                            onChange={setOptionSlippage}
-                            style={{
-                              border: '1px solid rgba(0,0,0,0.25)',
-                              borderRadius: 6,
-                              width: '100%',
-                            }}
-                          />
-                        </div>
-                        Infinite Approval
-                        <div>
-                          <Checkbox
-                            checked={optionInfiniteApproval}
-                            onChange={(e) => setOptionInfiniteApproval(e.target.checked)}
-                            disabled={true}>
-                            Activate Infinite Approval
-                          </Checkbox>
-                        </div>
-                        Bridges
-                        <div>
-                          <Select
-                            mode="multiple"
-                            placeholder="Select enabled bridges"
-                            value={optionEnabledBridges}
-                            onChange={setOptionEnabledBridges}
-                            style={{
-                              borderRadius: 6,
-                              width: '100%',
-                            }}>
-                            {availableBridges.map((bridge) => (
-                              <Select.Option key={bridge} value={bridge}>
-                                {bridge}
-                              </Select.Option>
-                            ))}
-                          </Select>
-                        </div>
-                        Exchanges
-                        <div>
-                          <Select
-                            mode="multiple"
-                            placeholder="Select enabled exchanges"
-                            value={optionEnabledExchanges}
-                            onChange={setOptionEnabledExchanges}
-                            style={{
-                              borderRadius: 6,
-                              width: '100%',
-                            }}>
-                            {availableExchanges.map((exchange) => (
-                              <Select.Option key={exchange} value={exchange}>
-                                {exchange}
-                              </Select.Option>
-                            ))}
-                          </Select>
-                        </div>
-                      </Collapse.Panel>
-                    </Collapse>
-                  </Row>
-                </span>
-              </Form>
-            </div>
+            <Form>
+              <SwapForm
+                depositChain={fromChainKey}
+                setDepositChain={setFromChainKey}
+                depositToken={fromTokenAddress}
+                setDepositToken={setFromTokenAddress}
+                depositAmount={depositAmount}
+                setDepositAmount={setDepositAmount}
+                withdrawChain={toChainKey}
+                setWithdrawChain={setToChainKey}
+                withdrawToken={toTokenAddress}
+                setWithdrawToken={setToTokenAddress}
+                withdrawAmount={withdrawAmount}
+                setWithdrawAmount={setWithdrawAmount}
+                estimatedWithdrawAmount={getSelectedWithdraw().estimate}
+                estimatedMinWithdrawAmount={getSelectedWithdraw().min}
+                transferChains={transferChains}
+                tokens={tokens}
+                balances={balances}
+                allowSameChains={true}
+              />
+              <span>
+                {/* Advanced Options */}
+                <Row justify={'center'}>
+                  <Collapse ghost style={{ width: '100%' }}>
+                    <Collapse.Panel header={`Advanced Options`} key="1">
+                      Slippage
+                      <div>
+                        <InputNumber
+                          defaultValue={optionSlippage}
+                          min={0}
+                          max={100}
+                          formatter={(value) => `${value}%`}
+                          parser={(value) => parseFloat(value ? value.replace('%', '') : '')}
+                          onChange={setOptionSlippage}
+                          style={{
+                            border: '1px solid rgba(0,0,0,0.25)',
+                            borderRadius: 6,
+                            width: '100%',
+                          }}
+                        />
+                      </div>
+                      Infinite Approval
+                      <div>
+                        <Checkbox
+                          checked={optionInfiniteApproval}
+                          onChange={(e) => setOptionInfiniteApproval(e.target.checked)}
+                          disabled={true}>
+                          Activate Infinite Approval
+                        </Checkbox>
+                      </div>
+                      Bridges
+                      <div>
+                        <Select
+                          mode="multiple"
+                          placeholder="Select enabled bridges"
+                          value={optionEnabledBridges}
+                          onChange={setOptionEnabledBridges}
+                          style={{
+                            borderRadius: 6,
+                            width: '100%',
+                          }}>
+                          {availableBridges.map((bridge) => (
+                            <Select.Option key={bridge} value={bridge}>
+                              {bridge}
+                            </Select.Option>
+                          ))}
+                        </Select>
+                      </div>
+                      Exchanges
+                      <div>
+                        <Select
+                          mode="multiple"
+                          placeholder="Select enabled exchanges"
+                          value={optionEnabledExchanges}
+                          onChange={setOptionEnabledExchanges}
+                          style={{
+                            borderRadius: 6,
+                            width: '100%',
+                          }}>
+                          {availableExchanges.map((exchange) => (
+                            <Select.Option key={exchange} value={exchange}>
+                              {exchange}
+                            </Select.Option>
+                          ))}
+                        </Select>
+                      </div>
+                    </Collapse.Panel>
+                  </Collapse>
+                </Row>
+              </span>
+            </Form>
           </Col>
         </Row>
 
@@ -1025,14 +1018,13 @@ const Swap = ({ transferChains }: SwapProps) => {
           style={{
             marginLeft: 12,
             marginRight: 12,
-            marginTop: 48,
+            marginTop: 0,
             padding: 12,
           }}>
           {routes.length > 0 && (
             <Col>
-              <h3 style={{ textAlign: 'center' }}>Routes</h3>
               <div
-                style={{ display: 'flex', flexDirection: 'row', overflowX: 'scroll' }}
+                style={{ display: 'flex', flexDirection: 'column', overflowX: 'scroll' }}
                 ref={routeCards}>
                 {routes.map((route, index) => (
                   <Route
@@ -1102,6 +1094,14 @@ const Swap = ({ transferChains }: SwapProps) => {
             }}></Swapping>
         </Modal>
       )}
+
+      <div className="showOnBottom">
+        <Col>
+          <Row style={{ marginTop: 24 }} justify={'center'}>
+            {submitButton()}
+          </Row>
+        </Col>
+      </div>
     </Content>
   )
 }

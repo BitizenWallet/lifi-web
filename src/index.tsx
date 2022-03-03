@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 import analytics from './services/analytics'
 import reportWebVitals from './services/reportWebVitals'
 
-analytics.initialize(process.env.REACT_APP_ANALYTICS_ID)
+// analytics.initialize(process.env.REACT_APP_ANALYTICS_ID)
 
 switch (process.env.REACT_APP_PACKAGE) {
   case 'lifi':
@@ -24,4 +24,4 @@ switch (process.env.REACT_APP_PACKAGE) {
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(analytics.sendWebVitals)
+// reportWebVitals(analytics.sendWebVitals)
