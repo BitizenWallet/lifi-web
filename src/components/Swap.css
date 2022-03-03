@@ -362,7 +362,6 @@ h4.swap-title {
 
 [data-theme='compact'] .active-transfer-collapse .site-collapse-active-transfer-panel,
 .active-transfer-collapse .site-collapse-active-transfer-panel {
-  margin-top: 16px;
   overflow: hidden;
   border: 0px;
   border-radius: 2px;

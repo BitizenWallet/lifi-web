@@ -1010,7 +1010,7 @@ const Swap = ({ transferChains }: SwapProps) => {
           {/* loading */}
           {routesLoading && (
             <Col>
-              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 120 }}>
+              <Row gutter={[32, 62]} justify={'center'} style={{ marginTop: 40 }}>
                 <LoadingIndicator></LoadingIndicator>
               </Row>
             </Col>

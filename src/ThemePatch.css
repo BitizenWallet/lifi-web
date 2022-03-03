@@ -35,7 +35,6 @@
 
 .allRoutes {
   margin: 20px;
-  margin-bottom: 80px;
   margin-top: 0;
 }
 
@@ -63,6 +62,7 @@
 
 .lifiWrap {
   margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .vi-hightlight {
