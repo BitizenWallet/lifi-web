@@ -1,0 +1,153 @@
+/*  */
+
+.animate {
+  transition: all 0.5s, opacity 0.64s;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  opacity: 0;
+}
+
+.visually-visible {
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+
+.allRoutes {
+  margin: 20px;
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+
+.suggestRoute {
+  margin: 20px;
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+
+.suggestRoute .swap-route {
+  opacity: 1 !important;
+}
+
+.showOnBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0), #1e242b);
+}
+
+.lifiWrap {
+  margin-top: 20px;
+}
+
+/*  */
+.ant-layout {
+  background-color: #1e242b;
+}
+
+.ant-btn,
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #fff;
+  border-color: #373c44;
+  background-color: #373c44;
+  font-weight: 600;
+}
+
+.ant-btn-primary {
+  border-color: #05a17d;
+  background-color: #05a17d;
+  font-weight: 600;
+}
+.ant-steps-icon-dot,
+.ant-steps-item-tail::after {
+  background-color: #05a17d !important;
+}
+
+.ant-input[disabled] {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary[disabled]:active {
+  color: rgba(255, 255, 255, 0.3);
+  border-color: #05a17d;
+  background-color: #05a17d;
+}
+
+/* z1 background */
+.form-input-wrapper,
+.ant-select-selector {
+  color: #fff !important;
+  background-color: #2c323a !important;
+  border-radius: 6px;
+}
+
+input {
+  color: #fff !important;
+  background-color: #2c323a !important;
+}
+
+.ant-select-selector,
+.ant-input-number,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ant-modal-content-color {
+  background-color: #3d4550 !important;
+}
+
+.background-z2 {
+  background-color: #3d4550 !important;
+  border-radius: 6px;
+}
+
+.dataRow-horizontal {
+  padding: 0;
+  padding-top: 14px;
+}
+
+.dataRow-horizontal .title,
+.dataRow-horizontal .value {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.dataRow-horizontal .title {
+  float: left;
+  color: #848d98;
+  font-weight: 400;
+}
+
+.dataRow-horizontal .value {
+  float: right;
+  font-weight: 500;
+}
+
+.dataRow-horizontal::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.white50Alpha {
+  color: rgba(255, 255, 255, 0.5);
+}

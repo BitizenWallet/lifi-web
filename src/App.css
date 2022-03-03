@@ -1,5 +1,19 @@
 @import '~antd/dist/antd.css';
+@import '~antd/dist/antd.dark.css';
 @import './css/animations.css';
+
+:root {
+  --red: #ff6347;
+  --yellow: #ffc107;
+  --blue: #6495ed;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    color: #ddd;
+    --red: #ad1a00;
+    --blue: #1346a4;
+  }
+}
 
 .wordmark {
   float: left;
@@ -152,6 +166,7 @@
   height: 18px;
   padding-top: 1px;
   padding-bottom: 1px;
+  color: #fff;
 }
 
 /* Annimations */

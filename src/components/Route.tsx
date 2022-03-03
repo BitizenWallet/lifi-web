@@ -106,10 +106,8 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
         padding: 24,
         paddingTop: 24,
         paddingBottom: 24,
-        marginLeft: 10,
-        marginRight: 10,
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: 10,
+        marginBottom: 10,
       }}
       onClick={() => onSelect()}>
       {/* {selected ? (
@@ -123,7 +121,7 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
       <h5>Plan</h5>
 
       <div className="selected">
-        <div className="dataRow">
+        <div className="dataRow background-z2">
           <div className="value">
             <b>{formatTokenAmount(route.toToken, route.toAmount)}</b>
           </div>
@@ -131,19 +129,19 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
         </div>
 
         <div style={{ textAlign: 'left' }}>
-          <div className="dataRow">
+          <div className="dataRow-horizontal">
+            <span className="title ">Estimated result</span>
             <div className="value">{route.toAmountUSD} USD</div>
-            <span className="title">Estimated result</span>
           </div>
 
-          <div className="dataRow">
-            <div className="value">{route.gasCostUSD} USD</div>
-            <span className="title">Estimated gas costs</span>
+          <div className="dataRow-horizontal">
+            <div className="value ">{route.gasCostUSD} USD</div>
+            <span className="title ">Estimated gas costs</span>
           </div>
 
-          <div className="dataRow">
-            <div className="value">{parsedDuration} min</div>
-            <span className="title">Estimated duration</span>
+          <div className="dataRow-horizontal">
+            <div className="value ">{parsedDuration} min</div>
+            <span className="title ">Estimated duration</span>
           </div>
         </div>
       </div>

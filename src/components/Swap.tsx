@@ -894,14 +894,11 @@ const Swap = ({ transferChains }: SwapProps) => {
         )}
 
         {/* Swap Form */}
-        <Row style={{ margin: 20 }} justify={'center'}>
-          <Col className={'swap-form animate ' + (showRoutesable ? 'visuallyhidden' : '')}>
-            <Row>
-              <Title className="swap-title" level={4}>
-                Please Specify Your Transaction
-              </Title>
-            </Row>
-
+        <Row justify={'center'}>
+          <Col
+            className={
+              'swap-form animate ' + (showRoutesable ? 'visually-hidden' : 'visually-visible')
+            }>
             <Form>
               <SwapForm
                 depositChain={fromChainKey}
@@ -938,8 +935,6 @@ const Swap = ({ transferChains }: SwapProps) => {
                           parser={(value) => parseFloat(value ? value.replace('%', '') : '')}
                           onChange={setOptionSlippage}
                           style={{
-                            border: '1px solid rgba(0,0,0,0.25)',
-                            borderRadius: 6,
                             width: '100%',
                           }}
                         />
@@ -961,7 +956,6 @@ const Swap = ({ transferChains }: SwapProps) => {
                           value={optionEnabledBridges}
                           onChange={setOptionEnabledBridges}
                           style={{
-                            borderRadius: 6,
                             width: '100%',
                           }}>
                           {availableBridges.map((bridge) => (
@@ -979,7 +973,6 @@ const Swap = ({ transferChains }: SwapProps) => {
                           value={optionEnabledExchanges}
                           onChange={setOptionEnabledExchanges}
                           style={{
-                            borderRadius: 6,
                             width: '100%',
                           }}>
                           {availableExchanges.map((exchange) => (
@@ -999,9 +992,21 @@ const Swap = ({ transferChains }: SwapProps) => {
 
         {/* Routes */}
 
-        <Row justify={'center'}>
-          {/*  */}
-          {routes.length > 0 && <button onClick={showRoutes}>Show Routes</button>}
+        <Row justify={'center'} className={showRoutesable ? 'visually-hidden' : 'visually-visible'}>
+          {/* 顯示推薦路由 */}
+          {routes.length > 0 && (
+            <Col className="suggestRoute">
+              <div ref={routeCards}>
+                <Route
+                  key={0}
+                  route={routes[0]}
+                  selected={highlightedIndex === 0}
+                  onSelect={() => setHighlightedIndex(0)}
+                />
+              </div>
+            </Col>
+          )}
+
           {/* loading */}
           {routesLoading && (
             <Col>
@@ -1013,14 +1018,10 @@ const Swap = ({ transferChains }: SwapProps) => {
         </Row>
 
         <Row
-          className={'animate ' + (showRoutesable ? '' : 'visuallyhidden')}
-          justify={'center'}
-          style={{
-            marginLeft: 12,
-            marginRight: 12,
-            marginTop: 0,
-            padding: 12,
-          }}>
+          className={
+            'allRoutes animate ' + (showRoutesable ? 'visually-visible' : 'visually-hidden')
+          }
+          justify={'center'}>
           {routes.length > 0 && (
             <Col>
               <div
@@ -1098,7 +1099,16 @@ const Swap = ({ transferChains }: SwapProps) => {
       <div className="showOnBottom">
         <Col>
           <Row style={{ marginTop: 24 }} justify={'center'}>
-            {submitButton()}
+            <Button
+              className={routes.length > 0 ? 'visually-visible' : 'visually-hidden'}
+              shape="round"
+              size={'large'}
+              onClick={showRoutes}
+              style={{ marginLeft: 5, marginRight: 5 }}>
+              Routes
+            </Button>
+
+            <div style={{ marginLeft: 5, marginRight: 5 }}>{submitButton()}</div>
           </Row>
         </Col>
       </div>

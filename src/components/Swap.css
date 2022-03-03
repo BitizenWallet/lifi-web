@@ -1,16 +1,5 @@
 @import '../css/animations.css';
 
-.animate {
-  height: auto;
-  opacity: 1;
-  transition: all 0.5s, opacity 2s;
-}
-
-.visuallyhidden {
-  opacity: 0;
-  height: 0;
-}
-
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -127,7 +116,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .swap-form {
-  margin-top: 36px;
+  margin: 20px;
+  margin-bottom: 0;
   overflow: hidden;
 }
 
@@ -234,7 +224,7 @@ h4.swap-title {
   margin-left: -24px;
   margin-right: -24px;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .swap-route h5 {
@@ -458,15 +448,4 @@ h4.swap-title {
   background-color: white;
   border-radius: 6px;
   z-index: 100;
-}
-
-.showOnBottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  padding: 1em;
 }

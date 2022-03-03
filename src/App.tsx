@@ -1,15 +1,12 @@
 import './App.css'
+import './ThemePatch.css'
 
-import { GithubOutlined, TwitterOutlined } from '@ant-design/icons'
 import { Button, Col, Layout, Menu, Row } from 'antd'
 import { Content } from 'antd/lib/layout/layout'
 import { useEffect, useState } from 'react'
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 
-// import logo from './assets/icon192.png'
-// import AboutPage from './components/AboutPage'
 import NotFoundPage from './components/NotFoundPage'
-import NotificationOverlay from './components/NotificationsOverlay'
 import Swap from './components/Swap'
 import WalletButtons from './components/web3/WalletButtons'
 import Web3ConnectionManager from './components/web3/Web3ConnectionManager'
