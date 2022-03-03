@@ -27,6 +27,12 @@
   margin-top: 10px;
 }
 
+.optionsPanel .ant-input-number,
+.optionsPanel input {
+  background-color: #393f46 !important;
+  border-radius: 6px;
+}
+
 .allRoutes {
   margin: 20px;
   margin-bottom: 80px;
