@@ -69,6 +69,13 @@
   color: #00b78c;
 }
 
+.miniText {
+  font-size: 11px;
+  color: #848d98;
+  margin-top: 3px;
+  margin-bottom: -4px;
+}
+
 /*  */
 .ant-layout {
   background-color: #1e242b;
@@ -105,6 +112,10 @@
   color: rgba(255, 255, 255, 0.3);
   border-color: #05a17d;
   background-color: #05a17d;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #393f46;
 }
 
 /* z1 background */

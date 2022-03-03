@@ -149,7 +149,9 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
             position={isMobile ? 'right' : 'right'}
             key={index + '_left'}
             color={color}>
-            <h4>Swap on {getAvatar(step.tool)}</h4>
+            <h4>
+              Swap on {step.tool} {getAvatar(step.tool)}
+            </h4>
             <span>
               {formatTokenAmount(step.action.fromToken, step.estimate?.fromAmount)}{' '}
               <ArrowRightOutlined />{' '}
@@ -203,7 +205,8 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
             color={color}>
             <h4>
               LiFi Contract from {getChainAvatar(getChainById(step.action.fromChainId).key)} to{' '}
-              {getChainAvatar(getChainById(step.action.toChainId).key)} via {getAvatar(step.tool)}
+              {getChainAvatar(getChainById(step.action.toChainId).key)} via {step.tool}{' '}
+              {getAvatar(step.tool)}
             </h4>
             <span>
               {formatTokenAmount(step.action.fromToken, step.estimate?.fromAmount)}{' '}

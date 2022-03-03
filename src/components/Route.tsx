@@ -118,12 +118,13 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
         </Button>
       )} */}
 
-      <h5>Plan</h5>
+      <h5>Token</h5>
 
       <div className="selected">
         <div className="dataRow background-z2">
-          <div className="value vi-hightlight">
-            <b>{formatTokenAmount(route.toToken, route.toAmount)}</b>
+          <div className="value">
+            <b className="vi-hightlight">{formatTokenAmount(route.toToken, route.toAmount)}</b>
+            {/* <div className='miniText' >≈$ {route.toAmountUSD}</div> */}
           </div>
           <span className="title">Estimated token</span>
         </div>
@@ -131,11 +132,11 @@ const Route = ({ route, selected, onSelect }: RouteProps) => {
         <div style={{ textAlign: 'left' }}>
           <div className="dataRow-horizontal">
             <span className="title ">Estimated result</span>
-            <div className="value">{route.toAmountUSD} USD</div>
+            <div className="value">$ {route.toAmountUSD}</div>
           </div>
 
           <div className="dataRow-horizontal">
-            <div className="value ">{route.gasCostUSD} USD</div>
+            <div className="value ">$ {route.gasCostUSD}</div>
             <span className="title ">Estimated gas costs</span>
           </div>
 
