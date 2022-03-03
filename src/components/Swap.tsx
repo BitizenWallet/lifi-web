@@ -1104,11 +1104,11 @@ const Swap = ({ transferChains }: SwapProps) => {
               shape="round"
               size={'large'}
               onClick={showRoutes}
-              style={{ marginLeft: 5, marginRight: 5 }}>
+              style={{ marginLeft: 5, marginRight: 5, marginBottom: 10 }}>
               {showRoutesable ? 'Form' : 'Routes'}
             </Button>
 
-            <div style={{ marginLeft: 5, marginRight: 5 }}>{submitButton()}</div>
+            <div style={{ marginLeft: 5, marginRight: 5, marginBottom: 10 }}>{submitButton()}</div>
           </Row>
         </Col>
       </div>
