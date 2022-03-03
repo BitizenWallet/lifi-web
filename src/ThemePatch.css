@@ -194,3 +194,7 @@ input {
 .ant-timeline-item-content span {
   color: #848d98;
 }
+
+.optionsPanel .ant-collapse-header {
+  font-size: 14px !important;
+}

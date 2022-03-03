@@ -867,7 +867,7 @@ const Swap = ({ transferChains }: SwapProps) => {
 
         {/* Active Routes */}
         {!!activeRoutes.length && (
-          <Row justify={'center'} className="activeTransfers">
+          <Row justify={'center'} className="activeTransfers optionsPanel">
             <Collapse
               defaultActiveKey={activeRoutes.length ? ['1'] : ['']}
               ghost
