@@ -1,0 +1,2 @@
+(this["webpackJsonplifi-web"]=this["webpackJsonplifi-web"]||[]).push([[0],{4:function(e,n,t){"use strict";t.r(n);t(5);var i=t(0),c=t.n(i),o=t(3),r=t.n(o),s=t(1);Promise.all([t.e(2),t.e(3)]).then(t.bind(null,11)).then((function(e){var n=e.App;r.a.render(Object(s.jsx)(c.a.StrictMode,{children:Object(s.jsx)(n,{})}),document.getElementById("root"))}))},5:function(e,n,t){}},[[4,1,4]]]);
+//# sourceMappingURL=main.52e6607d.chunk.js.map
