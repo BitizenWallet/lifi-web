@@ -150,6 +150,12 @@ input {
 
 .ant-modal-body {
   background-color: #1e242b !important;
+  padding: 20px;
+}
+
+.ant-modal-content {
+  border-radius: 12px !important;
+  overflow: hidden;
 }
 
 /*  */
@@ -197,4 +203,19 @@ input {
 
 .optionsPanel .ant-collapse-header {
   font-size: 14px !important;
+}
+
+.ant-timeline-item-head-blue {
+  color: #05a17d;
+  border-color: #05a17d;
+}
+
+hr {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #3d4550;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }

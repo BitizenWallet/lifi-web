@@ -384,7 +384,7 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
     const isFailed = steps.some((step) => step.execution?.status === 'FAILED')
     if (isFailed) {
       return (
-        <Button type="primary" onClick={() => restartCrossChainSwap()} style={{ marginTop: 10 }}>
+        <Button type="primary" onClick={() => restartCrossChainSwap()}>
           Restart from Failed Step
         </Button>
       )
@@ -399,7 +399,7 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
 
     // NOT_STARTED
     return (
-      <Button type="primary" onClick={() => startCrossChainSwap()} style={{ marginTop: 10 }}>
+      <Button type="primary" onClick={() => startCrossChainSwap()}>
         {isCrossChainSwap ? 'Start Cross Chain Swap' : 'Start Swap'}
       </Button>
     )
@@ -442,7 +442,7 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
         </Typography.Text>
       </div>
 
-      <Divider />
+      <hr />
 
       <div className="swapp-modal-footer">
         <div style={{ textAlign: 'center', transform: 'scale(1.3)' }}>{getMainButton()}</div>

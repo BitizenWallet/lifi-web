@@ -135,21 +135,6 @@ blockquote {
   }
 }
 
-.aboutPage .text-light h1,
-.aboutPage .text-light h2,
-.aboutPage .text-light h3,
-.aboutPage .text-light h4,
-.aboutPage .text-light h5,
-.aboutPage .text-light h6,
-.aboutPage .text-light .h1,
-.aboutPage .text-light .h2,
-.aboutPage .text-light .h3,
-.aboutPage .text-light .h4,
-.aboutPage .text-light .h5,
-.aboutPage .text-light .h6 {
-  color: !important;
-}
-
 .aboutPage .text-sm {
   font-size: 18px;
   line-height: 28px;
