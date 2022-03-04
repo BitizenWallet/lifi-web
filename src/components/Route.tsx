@@ -10,9 +10,6 @@ interface RouteProps {
 }
 
 const Route = ({ route, selected, onSelect }: RouteProps) => {
-  // eslint-disable-next-line no-console
-  console.log('route', route)
-
   const formatToolName = (toolKey: string) => {
     const tool = findTool(toolKey)
     if (tool) {

@@ -23,18 +23,7 @@ const getTransferChains = (jsonArraySting: string) => {
   }
 }
 
-function usePageViews() {
-  const [path, setPath] = useState<string>()
-
-  // eslint-disable-next-line no-console
-  console.log('path', path)
-
-  return path
-}
-
 function App() {
-  const path = usePageViews()
-
   return (
     <HashRouter>
       <WrappedWeb3ReactProvider>
