@@ -2,12 +2,11 @@ import { ArrowRightOutlined, LoadingOutlined, PauseCircleOutlined } from '@ant-d
 import { Web3Provider } from '@ethersproject/providers'
 import LiFi, { ExecutionSettings, StepTool } from '@lifinance/sdk'
 import { useWeb3React } from '@web3-react/core'
-import { Avatar, Button, Divider, Row, Space, Spin, Timeline, Tooltip, Typography } from 'antd'
+import { Avatar, Button, Row, Space, Spin, Timeline, Tooltip, Typography } from 'antd'
 import BigNumber from 'bignumber.js'
 import { constants } from 'ethers'
 import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { Link } from 'react-router-dom'
 
 import walletIcon from '../assets/wallet.png'
 import { storeRoute } from '../services/localStorage'

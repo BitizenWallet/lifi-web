@@ -228,3 +228,11 @@ hr {
 .form-input-wrapper {
   /* border-color: #05a17d !important; */
 }
+
+/* color */
+.ant-typography.ant-typography-danger {
+  color: #f05f5f !important;
+}
+.ant-typography.ant-typography-success {
+  color: #00b78c !important;
+}

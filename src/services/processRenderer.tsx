@@ -34,7 +34,8 @@ export function renderProcessMessage(process: Process) {
 export const renderProcessError = (step: Step, process: Process) => {
   const errorMessage = process.errorMessage && (
     <>
-      Error: {process.errorMessage.substring(0, 350)}
+      ProcessError: <br />
+      {process.errorMessage.substring(0, 350)}
       {process.errorMessage.length > 350 ? '...' : ''}
     </>
   )

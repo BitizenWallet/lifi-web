@@ -34,3 +34,16 @@ yarn deploy
 https://ropsten.oregonctf.org/
 
 https://socialsharepreview.com/?url=https://swap.dev.bitizen.org/
+
+
+
+## SDK 開發
+
+```shell
+// enter SDK dirctory
+yarn link
+
+// enter UI dirctrory
+yarn link '@lifinance/sdk'
+```
+

@@ -18,7 +18,6 @@ import {
   Typography,
 } from 'antd'
 import { Content } from 'antd/lib/layout/layout'
-import Title from 'antd/lib/typography/Title'
 import BigNumber from 'bignumber.js'
 import { ethers } from 'ethers'
 import { createBrowserHistory } from 'history'
