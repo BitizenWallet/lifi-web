@@ -452,7 +452,7 @@ const Swapping = ({ route, updateRoute, onSwapDone }: SwappingProps) => {
               <Typography.Text>{renderProcessMessage(currentProcess)}</Typography.Text>
             </Row>
             <Row justify="center">
-              <img src={walletIcon} alt="Please Check Your Wallet" />
+              <img src={walletIcon} alt="Please Check Your Wallet" width={40} />
             </Row>
           </>
         )}

@@ -236,3 +236,11 @@ hr {
 .ant-typography.ant-typography-success {
   color: #00b78c !important;
 }
+
+.ant-modal {
+  top: 0;
+}
+
+.swapModal.ant-modal {
+  margin-top: 10px !important;
+}
