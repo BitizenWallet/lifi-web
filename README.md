@@ -29,6 +29,16 @@ yarn start
 yarn deploy 
 ```
 
+## error
+```
+Failed to compile
+./src/components/web3/connectors.ts
+Attempted import error: 'ChainId' is not exported from '../../types'.
+```
+
+需要 SDK Build `yarn build`
+
+
 ## helpful Link
 
 https://ropsten.oregonctf.org/
