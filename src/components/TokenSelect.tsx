@@ -49,8 +49,10 @@ const TokenSelect = ({
         onChange={(v) => onChangeSelectedToken(v)}
         optionLabelProp="data-label"
         bordered={false}
-        dropdownStyle={{ minWidth: 300 }}
-        showSearch
+        dropdownStyle={{
+          width: '100%',
+         }}
+        // showSearch
         ref={(select) => {
           if (select) {
             selectReference.current = select
